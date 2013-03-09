@@ -1,0 +1,26 @@
+[include]
+	path = .gitconfig.private
+[color]
+	ui = auto
+	diff = auto
+[core]
+	ignorecase = false
+	autocrlf = false
+	filemode = false
+	excludesfile = ~/.gitignore_global
+[log]
+	date = iso
+[alias]
+	gunstage = reset HEAD --
+	gs = status -sb
+	gci = commit
+	gco = checkout
+	gpu = push origin master
+	gup = pull --rebase
+	gl  = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen%cr%Creset' -n 15
+	gll = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen%cr%Creset'
+	glg = log --pretty='tformat:%Cred%h%Creset %C(yellow)%an%Creset (%Cgreen%ar%Creset) %s'
+	grank = shortlog -s -n --no-merges
+	gw = whatchanged --oneline
+	gc = commit -m
+	gca = commit -am

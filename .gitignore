@@ -1,0 +1,16 @@
+# Ignore everything in home directory
+
+*
+
+# Except whitelisted dotfiles
+
+!README.md
+!.profile
+!.bashrc
+!.bash_profile
+
+!.gitconfig
+!.gitignore
+!.gitignore_global
+
+!.osx
