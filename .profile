@@ -25,10 +25,6 @@ alias mt='mvn test'
 alias startmysql='/usr/local/Cellar/mysql/5.1.47/share/mysql/mysql.server start'
 alias stopmysql='/usr/local/Cellar/mysql/5.1.47/share/mysql/mysql.server stop'
 
-# Folders
-
-alias dev='cd ~/Dropbox/Utvikling'
-
 # OSX
 
 alias s='open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
