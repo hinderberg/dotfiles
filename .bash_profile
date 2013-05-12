@@ -6,6 +6,6 @@ if [ -f ~/.bashrc ]; then
 	source ~/.bashrc
 fi
 
-if [ -f ~/.osx ]; then
+if [[ -f ~/.osx && `uname` == "Darwin" ]]; then
 	source ~/.osx
 fi
