@@ -1,0 +1,925 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"scrol",
+				"scroll_ok"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"sor",
+				"sortedTransactions"
+			],
+			[
+				"tr",
+				"transactionType"
+			],
+			[
+				"transac",
+				"transactions"
+			],
+			[
+				"Tr",
+				"Transactions"
+			],
+			[
+				"t",
+				"Transaction"
+			],
+			[
+				"Transactio",
+				"TransactionsView"
+			],
+			[
+				"trn",
+				"transaction1"
+			],
+			[
+				"Tra",
+				"Transaction"
+			],
+			[
+				"butto",
+				"buttons"
+			],
+			[
+				"cus",
+				"customerId"
+			],
+			[
+				"look",
+				"lookupCustomer"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"custom",
+				"customerValidStatusChanged"
+			],
+			[
+				"us",
+				"userIsLoggedIn"
+			],
+			[
+				"contact",
+				"contactCustomerInformationView"
+			],
+			[
+				"loo",
+				"lookupCustomerSuccessSpy"
+			],
+			[
+				"lo",
+				"lookupCustomerRequest"
+			],
+			[
+				"cont",
+				"contactCustomerInformationController"
+			],
+			[
+				"error",
+				"errorCallback"
+			],
+			[
+				"suc",
+				"successCallback"
+			],
+			[
+				"remote",
+				"remoteBookingDao"
+			],
+			[
+				"remoteBooki",
+				"REMOTE_BOOKING_URL"
+			],
+			[
+				"iss",
+				"issueStatuses"
+			],
+			[
+				"sea",
+				"searchString"
+			],
+			[
+				"compi",
+				"compiledPartial"
+			],
+			[
+				"se",
+				"searchbox"
+			],
+			[
+				"search",
+				"searchbox"
+			],
+			[
+				"pa",
+				"partials"
+			],
+			[
+				"ser",
+				"search"
+			],
+			[
+				"app",
+				"app  (variable)"
+			],
+			[
+				"pro",
+				"prototype  (variable)"
+			],
+			[
+				"person",
+				"person  (function)"
+			],
+			[
+				"models",
+				"models  (namespace)"
+			],
+			[
+				"views",
+				"views  (namespace)"
+			],
+			[
+				"api",
+				"api  (namespace)"
+			],
+			[
+				"of",
+				"of"
+			],
+			[
+				"p",
+				"plugins>  (element)"
+			],
+			[
+				"des",
+				"description  (variable)"
+			],
+			[
+				"name",
+				"name  (variable)"
+			],
+			[
+				"ex",
+				"extend  (function)"
+			],
+			[
+				"context",
+				"context  (argument)"
+			],
+			[
+				"el",
+				"element  (variable)"
+			],
+			[
+				"get",
+				"getAttention  (function)"
+			],
+			[
+				"s",
+				"script>  (element)"
+			],
+			[
+				"script",
+				"script>  (element)"
+			],
+			[
+				"ab",
+				"absolute  (value)"
+			],
+			[
+				"pos",
+				"position: position: type"
+			],
+			[
+				"pad",
+				"padding: padding: V H"
+			],
+			[
+				"heigh",
+				"height:   (property)"
+			],
+			[
+				"abs",
+				"absolute  (value)"
+			],
+			[
+				"z",
+				"z: z-index: index"
+			],
+			[
+				"rel",
+				"relative  (value)"
+			],
+			[
+				"globals",
+				"globals  (variable)"
+			],
+			[
+				"new",
+				"new  (keyword)"
+			],
+			[
+				"Array",
+				"Array  (class)"
+			],
+			[
+				"meta",
+				"meta"
+			],
+			[
+				"ta",
+				"tasks"
+			],
+			[
+				"fu",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": ".osx",
+			"settings":
+			{
+				"buffer_size": 965,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".profile",
+			"settings":
+			{
+				"buffer_size": 2488,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 17,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".bash_profile",
+			"settings":
+			{
+				"buffer_size": 66,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".bashrc",
+			"settings":
+			{
+				"buffer_size": 1617,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitconfig",
+			"settings":
+			{
+				"buffer_size": 690,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 168,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitignore_global",
+			"settings":
+			{
+				"buffer_size": 271,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 291.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"paca",
+				"Package Control: List Packages"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 588.0
+	},
+	"console":
+	{
+		"height": 181.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/hinderberg/.bash_rc",
+		"/Users/hinderberg/Dropbox/Dev/Github/perspective-api-tasks/.git/config",
+		"/Users/hinderberg/Dropbox/Dev/Github/perspective-validation/.git/config",
+		"/Users/hinderberg/Desktop/package.json",
+		"/Users/hinderberg/Desktop/Gruntfile.js",
+		"/Users/hinderberg/Desktop/component.json",
+		"/Users/hinderberg/Desktop/jsflicking",
+		"/Users/hinderberg/Desktop/Notes.md",
+		"/Users/hinderberg/Desktop/hans.jpg",
+		"/Users/hinderberg/Dropbox/Dev/Github/perspective/plugins/test/package.json",
+		"/Users/hinderberg/Dropbox/Dev/Github/perspective/plugins/test/index.js",
+		"/Users/hinderberg/Dropbox/Dev/Github/perspective/plugins/test/README.md",
+		"/Users/hinderberg/Dropbox/Dev/Github/perspective/server/package.json",
+		"/Users/hinderberg/Dropbox/Dev/Github/perspective/server/README.md",
+		"/Users/hinderberg/Dropbox/Dev/Github/perspective/package.json",
+		"/Users/hinderberg/Dropbox/Dev/Web/nils/untitled",
+		"/Users/hinderberg/Dropbox/Dev/Web/nils/js/parallax",
+		"/Users/hinderberg/Dropbox/Dev/Web/nils/js/libs/jquery",
+		"/Users/hinderberg/.account",
+		"/Users/hinderberg/.bash_history",
+		"/Users/hinderberg/.profile",
+		"/Users/hinderberg/.gitignore_global",
+		"/Users/hinderberg/.osx",
+		"/Users/hinderberg/.gitconfig.private",
+		"/Users/hinderberg/.gitconfig",
+		"/Users/hinderberg/.bashrc",
+		"/Users/hinderberg/.bash_profile",
+		"/Users/hinderberg/.gitignore",
+		"/Users/hinderberg/.gitk",
+		"/Users/hinderberg/.hgrc",
+		"/Users/hinderberg/.mavenrc",
+		"/Users/hinderberg/.netrc",
+		"/Users/hinderberg/.npmrc",
+		"/Users/hinderberg/.viminfo",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/backbone_and_structure.html",
+		"/Users/hinderberg/Dropbox/Utvikling/iOS/Telefonterror/Podfile",
+		"/Users/hinderberg/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/hinderberg/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/server.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/package.json",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/js/modules/transaction/transactions.hb",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/js/modules/transaction/transactions.html",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/libs/hb/hb.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/libs/hb/customHandlebars.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/libs/text.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/js/app.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/js/modules/transaction/transactionsView.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/js/modules/transaction/transactions.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/js/modules/transaction/transactionType.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/js/modules/transaction/transaction.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/index.html",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/notes.html",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/libs/require.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/libs/jquery.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/libs/underscore.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/presentation-ideas/backbone-and-structure/examples/libs/backbone.js",
+		"/Users/hinderberg/.ssh/id_rsa.pub",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/index.html",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/js-java-setup/README.md",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/js-java-setup/target/coverage/total-coverage.dat",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/public/javascripts/modules/stats/statsView.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/public/javascripts/main.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/public/javascripts/app.build.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/public/javascripts/libs/moment_nb.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/public/javascripts/modules/message/messageView.js",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/js-java-setup/src/main/config/buildconfig.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/web.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/node_modules/colibri/lib/crud/Del.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/node_modules/colibri/index.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/node_modules/colibri/lib/Method.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/node_modules/colibri/lib/crud/Get.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-course/web.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/.git/config",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/Procfile",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/Procfile",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ioskurs/app.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ioskurs/.gitignore",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_node/README.md",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/.gitignore",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ioskurs/package.json",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ioskurs/Procfile",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server_java/Procfile",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/server_node/app.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/server_node/views/index.jade",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/server_node/static/index.html",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/server_node/views/layout.jade",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/server_node/routes/index.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/server_node/package.json",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/server_node/static/.gitignore",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/GET/Get-Jira-Scrum-Board/app.js",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/server_node/package",
+		"/Users/hinderberg/Dropbox/Utvikling/Github/js-java-setup/.git/config",
+		"/Users/hinderberg/Dropbox/Bekk101/Kurs/2012 ios-kurs/ioskurs/runBackendServer.sh",
+		"/Users/hinderberg/Documents/Bekk101/Kurs/2012 ios-kurs/ios-kurs/index.html",
+		"/Users/hinderberg/Documents/Bekk101/Kurs/2012 ios-kurs/ios-kurs/runBackendServer.sh",
+		"/Users/hinderberg/Documents/Bekk101/Kurs/2012 ios-kurs/ios-kurs/server/pom.xml",
+		"/Users/hinderberg/Documents/Bekk101/Kurs/2012 ios-kurs/ios-kurs/pom.xml",
+		"/Users/hinderberg/Dropbox/Utvikling/iOS/Telefonterror/Telefonterror-Info.plist",
+		"/Users/hinderberg/Documents/GET/new/340-Utvikling/applications/sso/pom.xml",
+		"/Users/hinderberg/Documents/GET/new/340-Utvikling/applications/sso/run.sh",
+		"/no.get.commons.base.exceptions.NotFoundException:",
+		"/Users/hinderberg/Library/Caches/Homebrew/git-flow--git/.gitmodules",
+		"/Users/hinderberg/Library/Caches/Homebrew/git-flow--git/.git/config",
+		"/Users/hinderberg/Documents/GET/new/340-Utvikling/applications/dispatch/pom.xml",
+		"/Users/hinderberg/Documents/Kursdeltager/20120812 Android kurs/Android-kurs/.git/config",
+		"/Users/hinderberg/Documents/GET/new/340-Utvikling/applications/partner/run.sh",
+		"/Users/hinderberg/Documents/Github/GET/jira-node/index.js",
+		"/Users/hinderberg/Documents/Github/GET/jira-node/lib/dao/Project.js",
+		"/usr/local/etc/bash_completion.d/mvn-completion.sh",
+		"/usr/local/etc/bash_completion.d/brew_bash_completion.sh",
+		"/usr/local/etc/bash_completion.d/git-completion.bash",
+		"/Users/hinderberg/Dropbox/ConfigFiles/.git-bash-completion/git-completion.bash",
+		"/Users/hinderberg/Dropbox/ConfigFiles/.mvn-completion/mvn-completion.sh",
+		"/Dropbox/ConfigFiles/.mvn-completion/mvn-completion.sh",
+		"/usr/local/Library/Contributions/brew_bash_completion.sh",
+		"/Users/hinderberg/Dropbox/ConfigFiles/.git-bash-completion/README.markdown",
+		"/Users/hinderberg/.bachrc",
+		"/Users/hinderberg/Documents/Github/leak-finder/.gclient",
+		"/Users/hinderberg/Documents/Github/depot_tools/.gclient",
+		"/Users/hinderberg/Documents/Github/run/server/server.js",
+		"/Users/hinderberg/Documents/Github/run/server/router.js",
+		"/Users/hinderberg/Documents/Github/run/server/index.js",
+		"/Users/hinderberg/Documents/Github/run/server/requestHandler.js",
+		"/Users/hinderberg/Documents/Github/JTObjectMapping/JTObjectMapping.xcodeproj/project.pbxproj",
+		"/Users/hinderberg/Documents/GET/new/340-Utvikling/applications/rest/run.sh",
+		"/Users/hinderberg/Documents/Github/GET/Get-Jira-Scrum-Board/StreamBuffer.js",
+		"/Users/hinderberg/Documents/Github/GET/Get-Jira-Scrum-Board/public/javascripts/JiraProject.js",
+		"/Users/hinderberg/Documents/Github/GET/Get-Jira-Scrum-Board/public/javascripts/date.js"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"isWin",
+			"moment",
+			"lazyDirectives",
+			"		this.offsetY = $element.attr('data-parallax-offsety');\ndata-parallax-offsety",
+			"data-parallax-offsety",
+			"attr",
+			");",
+			"komponent",
+			"filer",
+			"backbone br",
+			"red",
+			"green",
+			"view'ene",
+			"viewene",
+			"avheng",
+			"events",
+			"renderte",
+			"for mye",
+			"events",
+			"holder",
+			"huge",
+			"<",
+			"exception",
+			"delegate",
+			".max-hei",
+			"viewcontr",
+			"define",
+			"delegate",
+			"DELEGATES #3",
+			"begin",
+			"uiviewcontroller",
+			"xcode",
+			"//",
+			"debugg",
+			"ib action",
+			"findActiveVersionKeys",
+			".middle.center\n<<<<<<<",
+			"DYLD_LIBRARY_PATH",
+			"command_not_found_handle",
+			"ibs",
+			"<!--Optional:-->",
+			"head",
+			"160700",
+			"block",
+			"\"826887027\"",
+			"826887027",
+			"1340221488814",
+			"dispatch-group",
+			"dispatch-gr",
+			"dispatch",
+			"28851",
+			"skill",
+			"X-Get-ApiTokenId:test\nContent-Type:application/vnd.no.get.partner-v1+xml;charset=utf-8",
+			"   ",
+			"12:54:32 >",
+			"optimize",
+			"\"require\"",
+			"require",
+			"new",
+			"bocoup",
+			"asm",
+			"3.0.5",
+			"org.springframework",
+			"spring",
+			"elements",
+			"updateIssueCache",
+			"console.log",
+			"ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxm+27hR08o86wN+DME48E0NNB1g2B+HbejaUKfqlY2NrnjeuKLXAZxvRBB18FVh8XVl9MuHotmvFCoND7FuyYyh5eTwsB/qNm8mbMdCkQ0deSmEsr5IzaDmYnPvsIBexgUh19zVs09qMgy1CEMWZdrtkhknpoPhIAY9MF5VwSVpu+iGPus3Dbbglij/rP6cckJBbXNnWbtcpzzEEWX0OVmHPZKjpF3T+Nd8fHI4R34BDl/H+wxB",
+			"ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxm+27hR08o86wN+DME48E0NNB1g2B+HbejaUKfqlY2NrnjeuKLXAZxvRBB18FVh8XVl9MuHotmvFCoND7FuyYyh5eTwsB/qNm8mbMdCkQ0deSmEsr5IzaDmYnPvsIBexgUh19zVs09qMgy1CEMWZdrtkhknpoPhIAY9MF5VwSVpu+iGPus3Dbbglij/rP6cckJBbXNnWbtcpzzEEWX0OVmHPZKjpF3T+Nd8fHI4R34BDl/H+wxBCloJh6OKqf5Vjg/TKszjMLudWmPT4Cp1uRASvNLmjmPbfLcS/5qi5S5HqmDCH7",
+			"smbclient",
+			"smb",
+			"relatedcontents",
+			"24058",
+			"createAll",
+			"site",
+			">>",
+			"<<",
+			"easein",
+			"easing",
+			"helper",
+			"loadPartials",
+			"partial",
+			"'",
+			"parse_svn_url",
+			"parse_svn_repository_root",
+			"parse_git_branch",
+			"plugin",
+			"site",
+			"console.log",
+			"form",
+			"width",
+			"renderTask",
+			"renderTasksHTML",
+			"bind",
+			"177",
+			"68",
+			"62",
+			"allowFormsInIscroll",
+			"subscribed"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" ",
+			"",
+			"mount_smbfs",
+			"smbutil",
+			"\\'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": ".osx",
+					"settings":
+					{
+						"buffer_size": 965,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".profile",
+					"settings":
+					{
+						"buffer_size": 2488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 17,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": ".bash_profile",
+					"settings":
+					{
+						"buffer_size": 66,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": ".bashrc",
+					"settings":
+					{
+						"buffer_size": 1617,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": ".gitconfig",
+					"settings":
+					{
+						"buffer_size": 690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": ".gitignore",
+					"settings":
+					{
+						"buffer_size": 168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": ".gitignore_global",
+					"settings":
+					{
+						"buffer_size": 271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 27.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 268.0,
+	"status_bar_visible": true
+}
