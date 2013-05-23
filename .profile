@@ -66,11 +66,30 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export ANDROID_SDK=/usr/local/Cellar/android-sdk/r20.0.1
 
 # History
+
 shopt -s cmdhist
 export HISTCONTROL=erasedups
 export HISTFILESIZE=10000
 export HISTIGNORE="&:ls:cd:[bf]g:exit:..:...:l:ll:la:pu:po:unrar:exit"
 export HISTSIZE=10000
+
+# Language
+
+export NLS_LANG=NORWEGIAN_NORWAY.UTF8
+
+# Grep
+
+GREP_OPTIONS='--color=auto'
+GREP_COLORS='ms=1;31'
+export GREP_OPTIONS GREP_COLORS
+
+# Man
+
+MANWIDTH=80
+export MANWIDTH
+
+# Mail - Never check for mail
+unset MAILCHECK
 
 ####################
 # Functions
