@@ -39,6 +39,7 @@ C_B_RED='\e[01:31m'
 C_B_GREEN='\e[01:32m'
 C_B_MAGENTA='\e[01;35m'
 C_B_YELLOW='\e[01;33m'
+C_B_WHITE='\e[1;37m' 
 
 # - git
 
@@ -60,29 +61,29 @@ parse_git_state() {
 
 	local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
 	if [ "$NUM_AHEAD" -gt 0 ]; then
-		GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
+		GIT_STATE"$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}"
 	fi
 
 	local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
 	if [ "$NUM_BEHIND" -gt 0 ]; then
-		GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
+		GIT_STATE="$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}"
 	fi
 
 	local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
 	if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
-		GIT_STATE=$GIT_STATE$GIT_PROMPT_MERGING
+		GIT_STATE="$GIT_STATE$GIT_PROMPT_MERGING"
 	fi
 
 	if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-		GIT_STATE=$GIT_STATE$GIT_PROMPT_UNTRACKED
+		GIT_STATE="$GIT_STATE$GIT_PROMPT_UNTRACKED"
 	fi
 
 	if ! git diff --quiet 2> /dev/null; then
-		GIT_STATE=$GIT_STATE$GIT_PROMPT_MODIFIED
+		GIT_STATE="$GIT_STATE$GIT_PROMPT_MODIFIED"
 	fi
 
 	if ! git diff --cached --quiet 2> /dev/null; then
-		GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
+		GIT_STATE="$GIT_STATE$GIT_PROMPT_STAGED"
 	fi
 
 	if [[ -n $GIT_STATE ]]; then
@@ -110,11 +111,11 @@ _ok_status() {
 }
 
 PS1=''
-PS1="$PS1"'\w '
-PS1="$PS1${C_GREEN}"'$(git_prompt_string)'"${C_RESET}"
+PS1="$PS1\[${C_B_WHITE}\]"'\w '
+PS1="$PS1\[${C_GREEN}\]"'$(git_prompt_string)'"\[${C_RESET}\]"
 PS1="$PS1"'$(_ok_status $? && printf "'${C_GREY}'" || printf "'${C_RED}'")'
-PS1="${PS1} ${prompt_symbol}${C_RESET} "
+PS1="${PS1} ${prompt_symbol}\[${C_RESET}\] "
 
-PS2="${C_BLUE}${prompt_symbol}${C_RESET} "
+PS2="\[${C_BLUE}\]${prompt_symbol}\[${C_RESET}\] "
 
 unset prompt_symbol
