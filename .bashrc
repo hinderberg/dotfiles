@@ -61,7 +61,7 @@ parse_git_state() {
 
 	local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
 	if [ "$NUM_AHEAD" -gt 0 ]; then
-		GIT_STATE"$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}"
+		GIT_STATE="$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}"
 	fi
 
 	local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
