@@ -88,7 +88,8 @@ export GREP_OPTIONS GREP_COLORS
 MANWIDTH=80
 export MANWIDTH
 
-# Mail - Never check for mail
+# Mail
+
 unset MAILCHECK
 
 ####################
