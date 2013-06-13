@@ -1,0 +1,14 @@
+# Update brew
+brew update
+
+# Update brew formula
+brew upgrade
+
+brew install findutils
+brew install bash
+
+brew install git
+brew install bash-completion
+brew install node
+
+brew cleanup

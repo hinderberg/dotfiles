@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-Using https://github.com/tomislav/osx-terminal.app-colors-solarized for OSX terminal
+Color theme in OSX terminal: https://github.com/tomislav/osx-terminal.app-colors-solarized 
