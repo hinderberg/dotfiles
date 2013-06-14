@@ -17,5 +17,7 @@
 !.osx_always
 !.brew
 
+!startup.sh
+
 !dotfiles.sublime-workspace
 !dotfiles.sublime-project
