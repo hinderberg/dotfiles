@@ -43,7 +43,7 @@ C_B_WHITE='\e[1;37m'
 
 # - git
 
-GIT_PROMPT_PREFIX="${C_GREEN}[${C_RESET}"
+GIT_PROMPT_PREFIX="${C_RESET}${C_GREEN}[${C_RESET}"
 GIT_PROMPT_SUFFIX="${C_GREEN}]${C_RESET}"
 GIT_PROMPT_AHEAD="${C_RED}ANUM${C_RESET}"
 GIT_PROMPT_BEHIND="${C_CYAN}BNUM${C_RESET}"
@@ -114,8 +114,8 @@ PS1=''
 PS1="$PS1\[${C_B_WHITE}\]"'\w '
 PS1="$PS1\[${C_GREEN}\]"'$(git_prompt_string)'"\[${C_RESET}\]"
 PS1="$PS1"'$(_ok_status $? && printf "'${C_GREY}'" || printf "'${C_RED}'")'
-PS1="${PS1} ${prompt_symbol}\[${C_RESET}\] "
+PS1="${PS1}${prompt_symbol}${C_RESET} "
 
-PS2="\[${C_BLUE}\]${prompt_symbol}\[${C_RESET}\] "
+PS2="${C_GREY}${prompt_symbol}${C_RESET} "
 
 unset prompt_symbol

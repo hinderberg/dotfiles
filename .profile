@@ -17,11 +17,22 @@ alias ...="cd ../../.."
 alias ....="cd ../../../.."
 alias h="cd ~"
 
+alias o="open"
+alias oo="open ."
+alias h="history"
+
+alias d="cd ~/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/Dropbox/Dev"
+
 # Code-convenience
 
 alias mci='mvn clean install'
 alias mcit='mvn clean install -Dmaven.test.skip'
 alias mt='mvn test'
+
+alias g="git"
 
 ####################
 # Exports
@@ -76,6 +87,8 @@ export HISTSIZE=10000
 # Language
 
 export NLS_LANG=NORWEGIAN_NORWAY.UTF8
+export LANG="en_US"
+export LC_ALL="en_US.UTF-8"
 
 # Grep
 

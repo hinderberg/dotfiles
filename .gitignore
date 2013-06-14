@@ -5,6 +5,7 @@
 # Except whitelisted dotfiles
 
 !README.md
+
 !.profile
 !.bashrc
 !.bash_profile
@@ -12,6 +13,8 @@
 !.gitconfig
 !.gitignore
 !.gitignore_global
+
+!.npmrc
 
 !.osx
 !.osx_always
@@ -21,3 +24,5 @@
 
 !dotfiles.sublime-workspace
 !dotfiles.sublime-project
+
+!Solarized.terminal
