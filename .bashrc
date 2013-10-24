@@ -2,20 +2,17 @@
 # Expors
 ####################
 
-# Terminal Title
-
-set_terminal_title() {
-    if [[ -z $@ ]]
-    then
-        TERMINAL_TITLE=$PWD
-    else
-        TERMINAL_TITLE=$@
-    fi
-}
-
-alias stt='set_terminal_title'
-
 # PS1
+
+##-ANSI-COLOR-CODES-##
+Color_Off="\[\033[0m\]"
+###-Regular-###
+Red="\[\033[0;31m\]"
+Green="\[\033[0;32m\]"
+Purple="\[\033[0;35\]"
+####-Bold-####
+BRed="\[\033[1;31m\]"
+BPurple="\[\033[1;35m\]"
 
 #Attribute codes:
 #00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed 
@@ -26,96 +23,53 @@ alias stt='set_terminal_title'
 #Background color codes:
 #40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
 
-# - colors
-C_RED='\e[00:31m'
-C_GREEN='\e[00:32m'
-C_BLUE='\e[00;36m'
-C_CYAN='\e[00;34m'
-C_MAGENTA='\e[00;35m'
-C_YELLOW='\e[00;33m'
-C_RESET='\e[00:0m'
+# Set the terminal title to the current working directory
 
-C_B_RED='\e[01:31m'
-C_B_GREEN='\e[01:32m'
-C_B_MAGENTA='\e[01;35m'
-C_B_YELLOW='\e[01;33m'
-C_B_WHITE='\e[1;37m' 
 
-# - git
-
-GIT_PROMPT_PREFIX="${C_RESET}${C_GREEN}[${C_RESET}"
-GIT_PROMPT_SUFFIX="${C_GREEN}]${C_RESET}"
-GIT_PROMPT_AHEAD="${C_RED}ANUM${C_RESET}"
-GIT_PROMPT_BEHIND="${C_CYAN}BNUM${C_RESET}"
-GIT_PROMPT_MERGING="${C_B_MAGENTA}merging${C_RESET}"
-GIT_PROMPT_UNTRACKED="${C_B_RED}u${C_RESET}"
-GIT_PROMPT_MODIFIED="${C_B_YELLOW}m${C_RESET}"
-GIT_PROMPT_STAGED="${C_B_GREEN}s${C_RESET}"
+# Build the prompt
+# set up command prompt
+function __prompt_command()
+{
+    # capture the exit status of the last command
+    EXIT="$?"
+    PS1="\[\033]0;\w\007\]"
  
-parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
-}
+    if [ $EXIT -eq 0 ]; then PS1+="\[$Green\][\!]\[$Color_Off\] "; else PS1+="\[$Red\][\!]\[$Color_Off\] "; fi
  
-parse_git_state() {
-	local GIT_STATE=""
-
-	local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
-	if [ "$NUM_AHEAD" -gt 0 ]; then
-		GIT_STATE="$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}"
-	fi
-
-	local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
-	if [ "$NUM_BEHIND" -gt 0 ]; then
-		GIT_STATE="$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}"
-	fi
-
-	local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
-	if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
-		GIT_STATE="$GIT_STATE$GIT_PROMPT_MERGING"
-	fi
-
-	if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-		GIT_STATE="$GIT_STATE$GIT_PROMPT_UNTRACKED"
-	fi
-
-	if ! git diff --quiet 2> /dev/null; then
-		GIT_STATE="$GIT_STATE$GIT_PROMPT_MODIFIED"
-	fi
-
-	if ! git diff --cached --quiet 2> /dev/null; then
-		GIT_STATE="$GIT_STATE$GIT_PROMPT_STAGED"
-	fi
-
-	if [[ -n $GIT_STATE ]]; then
-		echo -e "$GIT_PROMPT_PREFIX$GIT_STATE$GIT_PROMPT_SUFFIX"
-	fi
-}
+    # if logged in via ssh shows the ip of the client
+    if [ -n "$SSH_CLIENT" ]; then PS1+="\[$Yellow\]("${$SSH_CLIENT%% *}")\[$Color_Off\]"; fi
  
-git_prompt_string() {
-  local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo -e "$(parse_git_state)$GIT_PROMPT_PREFIX${C_YELLOW}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
+    # debian chroot stuff (take it or leave it)
+    PS1+="${debian_chroot:+($debian_chroot)}"
+ 
+    # basic information (user@host:path)
+    PS1+="\[$BRed\]\[$BRed\]\h\[$Color_Off\]:\[$BPurple\]\w\[$Color_Off\] "
+ 
+    # check if inside git repo
+    local git_status="`git status -unormal 2>&1`"    
+    if ! [[ "$git_status" =~ Not\ a\ git\ repo ]]; then
+        # parse the porcelain output of git status
+        if [[ "$git_status" =~ nothing\ to\ commit ]]; then
+            local Color_On=$Green
+        elif [[ "$git_status" =~ nothing\ added\ to\ commit\ but\ untracked\ files\ present ]]; then
+            local Color_On=$Purple
+        else
+            local Color_On=$Red
+        fi
+ 
+        if [[ "$git_status" =~ On\ branch\ ([^[:space:]]+) ]]; then
+            branch=${BASH_REMATCH[1]}
+        else
+            # Detached HEAD. (branch=HEAD is a faster alternative.)
+            branch="(`git describe --all --contains --abbrev=4 HEAD 2> /dev/null || echo HEAD`)"
+        fi
+ 
+        # add the result to prompt
+        PS1+="\[$Color_On\][$branch]\[$Color_Off\] "
+    fi
+ 
+    # prompt $ or # for root
+    PS1+="\$ "
 }
 
-# Use unicode prompt symbol in when:
-#   - running with UTF-8 locale and
-#   - not in real console where fonts are limited to ASCII
-if tty | grep -F /dev/pts >/dev/null && [[ $LANG == *UTF-8* ]]; then
-  prompt_symbol='❯'
-else
-  prompt_symbol='>'
-fi
-
-# Color prompt symbol red when last command had a non-zero exit code:
-_ok_status() {
-  [ $1 -eq 0 -o $1 -eq 130 ]
-}
-
-PS1=''
-PS1="$PS1\[${C_B_WHITE}\]"'\w '
-PS1="$PS1\[${C_GREEN}\]"'$(git_prompt_string)'"\[${C_RESET}\]"
-PS1="$PS1"'$(_ok_status $? && printf "'${C_GREY}'" || printf "'${C_RED}'")'
-PS1="${PS1}${prompt_symbol}${C_RESET} "
-
-PS2="${C_GREY}${prompt_symbol}${C_RESET} "
-
-unset prompt_symbol
+PROMPT_COMMAND=__prompt_command

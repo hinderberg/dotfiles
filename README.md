@@ -7,6 +7,9 @@ dotfiles
 
 Terminal theme: https://github.com/tomislav/osx-terminal.app-colors-solarized 
 
+## Font
+
+http://www.levien.com/type/myfonts/inconsolata.html
 
 ## Bash
 
