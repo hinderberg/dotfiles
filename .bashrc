@@ -14,35 +14,28 @@ Purple="\[\033[0;35\]"
 BRed="\[\033[1;31m\]"
 BPurple="\[\033[1;35m\]"
 
-#Attribute codes:
-#00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed 
-
-#Text color codes:
-#30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
-
-#Background color codes:
-#40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
-
-# Set the terminal title to the current working directory
-
-
-# Build the prompt
-# set up command prompt
 function __prompt_command()
 {
+    PS1="\[\033]0;\w\007\]"
+
     # capture the exit status of the last command
     EXIT="$?"
-    PS1="\[\033]0;\w\007\]"
  
-    if [ $EXIT -eq 0 ]; then PS1+="\[$Green\][\!]\[$Color_Off\] "; else PS1+="\[$Red\][\!]\[$Color_Off\] "; fi
+    if [ $EXIT -eq 0 ]; then 
+        PS1+="\[$Green\][\!]\[$Color_Off\] "; 
+    else 
+        PS1+="\[$Red\][\!]\[$Color_Off\] "; 
+    fi
  
     # if logged in via ssh shows the ip of the client
-    if [ -n "$SSH_CLIENT" ]; then PS1+="\[$Yellow\]("${$SSH_CLIENT%% *}")\[$Color_Off\]"; fi
+    if [ -n "$SSH_CLIENT" ]; then 
+        PS1+="\[$Yellow\]("${$SSH_CLIENT%% *}")\[$Color_Off\]"; 
+    fi
  
     # debian chroot stuff (take it or leave it)
     PS1+="${debian_chroot:+($debian_chroot)}"
  
-    # basic information (user@host:path)
+    # basic information
     PS1+="\[$BRed\]\[$BRed\]\h\[$Color_Off\]:\[$BPurple\]\w\[$Color_Off\] "
  
     # check if inside git repo

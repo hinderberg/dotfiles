@@ -9,9 +9,6 @@ cp ./.osx_always ~/.osx_always
 cp ./.profile ~/.profile
 cp ./.npmrc ~/.npmrc
 
-mkdir -p ~/.sh
-cp ./git-prompt.sh ~/.sh
-
 if [[ -f ./.osx && `uname` == "Darwin" ]]; then
 	echo "Updating OSX settings and installing brew apps"
 	source ./.brew
