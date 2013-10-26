@@ -9,7 +9,7 @@ Color_Off="\[\033[0m\]"
 ###-Regular-###
 Red="\[\033[0;31m\]"
 Green="\[\033[0;32m\]"
-Purple="\[\033[0;35\]"
+Purple="\[\033[0;35m\]"
 ####-Bold-####
 BRed="\[\033[1;31m\]"
 BPurple="\[\033[1;35m\]"
@@ -56,7 +56,7 @@ function __prompt_command()
             # Detached HEAD. (branch=HEAD is a faster alternative.)
             branch="(`git describe --all --contains --abbrev=4 HEAD 2> /dev/null || echo HEAD`)"
         fi
- 
+
         # add the result to prompt
         PS1+="\[$Color_On\][$branch]\[$Color_Off\] "
     fi
