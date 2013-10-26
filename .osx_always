@@ -13,6 +13,7 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 # Functions
 ####################
 
+# VERY SLOW!!!
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
