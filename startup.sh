@@ -13,6 +13,7 @@ if [[ -f ./.osx && `uname` == "Darwin" ]]; then
 	echo "Updating OSX settings and installing brew apps"
 	source ./.brew
 	source ./.osx
+	source ./.programs
 
 	sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/bin/subl
 fi
