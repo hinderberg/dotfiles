@@ -10,7 +10,7 @@ alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimul
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
 
 ####################
-# Functions
+# Loading
 ####################
 
 # VERY SLOW!!!

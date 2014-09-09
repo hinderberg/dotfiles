@@ -24,7 +24,7 @@ alias h="history"
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/Dropbox/Dev"
+alias dev="cd ~/Dropbox/Dev"
 
 # Code-convenience
 
@@ -72,10 +72,6 @@ export NODE_PATH="/usr/local/lib/node"
 
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Android
-
-export ANDROID_SDK=/usr/local/Cellar/android-sdk/r20.0.1
-
 # History
 
 shopt -s cmdhist
@@ -118,5 +114,3 @@ _useJava 1.7
 function server() {
 	python -m SimpleHTTPServer $1
 }
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
