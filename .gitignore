@@ -18,13 +18,10 @@
 
 !.osx
 !.osx_always
-!.brew
 
 !startup.sh
 
-!dotfiles.sublime-workspace
-!dotfiles.sublime-project
-
-!Solarized.terminal
-!Inconsolata.otf 
+!Solarized-Dark.terminal
+!Solarized-Light.terminal
+!Inconsolata.otf
 !.programs

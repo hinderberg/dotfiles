@@ -1,1 +1,22 @@
+# Update brew
+brew update
+
+# Update brew formula
+brew upgrade
+
+brew install findutils
+brew install bash
+
+brew install git
+brew install bash-completion
+brew install node
+brew install mongodb
+brew install rethinkdb
+brew install redis
+brew install heroku-toolbelt
+brew install mr
+brew install imagemagick
+
+brew cleanup
+
 curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
