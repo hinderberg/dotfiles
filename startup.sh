@@ -12,7 +12,7 @@ cp ./.npmrc ~/.npmrc
 if [[ -f ./.osx && `uname` == "Darwin" ]]; then
 	echo "Updating OSX settings and installing brew apps"
 	sh ./.programs
-	sudo sh ./.osx
+	sh ./.osx
 	sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
 	chsh -s /usr/local/bin/bash
 fi
