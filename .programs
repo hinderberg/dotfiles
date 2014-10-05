@@ -8,7 +8,6 @@ brew upgrade
 
 brew install findutils
 brew install bash
-
 brew install git
 brew install bash-completion
 brew install node
@@ -18,6 +17,7 @@ brew install redis
 brew install heroku-toolbelt
 brew install mr
 brew install imagemagick
+brew install xctool
 
 brew cleanup
 
