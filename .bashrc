@@ -2,6 +2,7 @@
 # Expors
 ####################
 
+PROMPT_DIRTRIM=4
 
 if tput setaf 1 &> /dev/null; then
   tput sgr0 &> /dev/null
