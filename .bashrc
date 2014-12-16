@@ -264,4 +264,8 @@ function ssh_client() {
   fi
 }
 
-PS1="\[$user_color\]$(ssh_client)\[$reset\]\[$reset\]\[$dir_color\]\w\[$reset\]\$( is_on_git && echo -n \" \[$preposition_color\] on \[$reset\] \" && echo -n \"\[$git_status_color\]\$(get_git_info)\" && echo -n \"\[$git_progress_color\]\$(get_git_progress)\" && echo -n \"\[$preposition_color\]\")\n\[$reset\]\[$symbol_color\]$(get_prompt_symbol) \[$reset\]"
+function create_bash_prompt {
+  export PS1="\[$user_color\]$(ssh_client)\[$reset\]\[$reset\]\[$dir_color\]\w\[$reset\]\$( is_on_git && echo -n \" \[$preposition_color\] on \[$reset\] \" && echo -n \"\[$git_status_color\]\$(get_git_info)\" && echo -n \"\[$git_progress_color\]\$(get_git_progress)\" && echo -n \"\[$preposition_color\]\")\n\[$reset\]\[$symbol_color\]$(get_prompt_symbol) \[$reset\]"
+}
+
+export PROMPT_COMMAND=create_bash_prompt
