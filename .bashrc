@@ -67,13 +67,13 @@ if [[ -n "$PROMPT_SYMBOL_COLOR" ]]; then symbol_color="$PROMPT_SYMBOL_COLOR"; fi
 
 # Set up symbols
 synced_symbol=""
-dirty_synced_symbol="*"
-unpushed_symbol="△"
-dirty_unpushed_symbol="▲"
-unpulled_symbol="▽"
-dirty_unpulled_symbol="▼"
-unpushed_unpulled_symbol="⬡"
-dirty_unpushed_unpulled_symbol="⬢"
+dirty_synced_symbol="* "
+unpushed_symbol="△ "
+dirty_unpushed_symbol="▲ "
+unpulled_symbol="▽ "
+dirty_unpulled_symbol="▼ "
+unpushed_unpulled_symbol="⬡ "
+dirty_unpushed_unpulled_symbol="⬢ "
 
 # Apply symbol overrides that have been set in the environment
 # DEV: Working unicode symbols can be determined via the following gist
@@ -265,7 +265,7 @@ function ssh_client() {
 }
 
 function create_bash_prompt {
-  export PS1="\[$user_color\]$(ssh_client)\[$reset\]\[$reset\]\[$dir_color\]\w\[$reset\]\$( is_on_git && echo -n \" \[$preposition_color\] on \[$reset\] \" && echo -n \"\[$git_status_color\]\$(get_git_info)\" && echo -n \"\[$git_progress_color\]\$(get_git_progress)\" && echo -n \"\[$preposition_color\] \")\[$reset\]\[$symbol_color\] $(get_prompt_symbol) \[$reset\]"
+  export PS1="\[$user_color\]$(ssh_client)\[$reset\]\[$reset\]\[$dir_color\]\w\[$reset\]\$( is_on_git && echo -n \" \[$preposition_color\] on \[$reset\] \" && echo -n \"\[$git_status_color\]\$(get_git_info)\" && echo -n \"\[$git_progress_color\]\$(get_git_progress)\" && echo -n \"\[$preposition_color\]\")\[$reset\]\[$symbol_color\] $(get_prompt_symbol) \[$reset\]"
 }
 
 export PROMPT_COMMAND=create_bash_prompt
