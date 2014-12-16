@@ -2,7 +2,7 @@
 # Expors
 ####################
 
-PROMPT_DIRTRIM=4
+PROMPT_DIRTRIM=3
 
 if tput setaf 1 &> /dev/null; then
   tput sgr0 &> /dev/null
@@ -67,7 +67,7 @@ if [[ -n "$PROMPT_SYMBOL_COLOR" ]]; then symbol_color="$PROMPT_SYMBOL_COLOR"; fi
 
 # Set up symbols
 synced_symbol=""
-dirty_synced_symbol="* "
+dirty_synced_symbol="*"
 unpushed_symbol="△ "
 dirty_unpushed_symbol="▲ "
 unpulled_symbol="▽ "
