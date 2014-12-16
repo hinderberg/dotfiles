@@ -198,10 +198,6 @@ function parse_git_dirty() {
   fi
 }
 
-function is_on_git() {
-  git rev-parse 2> /dev/null
-}
-
 function get_git_status() {
   # Grab the git dirty and git behind
   dirty_branch="$(parse_git_dirty)"
@@ -238,7 +234,7 @@ function get_git_info () {
     output="$branch"
 
     # Add on the git status
-    output="$output$(get_git_status)"
+    output="$output $(get_git_status)"
 
     # Echo our output
     echo "$output"
@@ -255,6 +251,10 @@ function get_prompt_symbol() {
   fi
 }
 
+function is_on_git() {
+  git rev-parse 2> /dev/null
+}
+
 function ssh_client() {
   if [ -n "$SSH_CLIENT" ]; then
     echo "("${$SSH_CLIENT%% *}")";
@@ -263,18 +263,4 @@ function ssh_client() {
   fi
 }
 
-# Define the sexy-bash-prompt
-PS1="\[$git_status_color\]\$(ssh_client)\[$reset\]\[$user_color\]\u\[$reset\] \
-\[$preposition_color\]at\[$reset\] \
-\[$device_color\]\h\[$reset\] \
-\[$preposition_color\]in\[$reset\] \
-\[$dir_color\]\w\[$reset\]\
-\$( is_on_git && \
-echo -n \" \[$preposition_color\]on\[$reset\] \" && \
-echo -n \"\[$git_status_color\]\$(get_git_info)\" && \
-echo -n \"\[$git_progress_color\]\$(get_git_progress)\" && \
-echo -n \"\[$preposition_color\]\")\n\[$reset\]\
-\[$symbol_color\]$(get_prompt_symbol) \[$reset\]"
-
-
-PROMPT_COMMAND=PS1
+PS1="\[$user_color\]$(ssh_client)\[$reset\]\[$reset\]\[$dir_color\]\w\[$reset\]\$( is_on_git && echo -n \" \[$preposition_color\] on \[$reset\] \" && echo -n \"\[$git_status_color\]\$(get_git_info)\" && echo -n \"\[$git_progress_color\]\$(get_git_progress)\" && echo -n \"\[$preposition_color\]\")\n\[$reset\]\[$symbol_color\]$(get_prompt_symbol) \[$reset\]"

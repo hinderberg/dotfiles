@@ -18,6 +18,7 @@ brew install heroku-toolbelt
 brew install mr
 brew install imagemagick
 brew install xctool
+brew install boot2docker
 
 brew cleanup
 
