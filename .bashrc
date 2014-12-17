@@ -1,6 +1,6 @@
-####################
-# Expors
-####################
+if [ -z "$PS1" ]; then
+  return
+fi
 
 PROMPT_DIRTRIM=3
 
@@ -88,10 +88,10 @@ if [[ -n "$PROMPT_DIRTY_UNPULLED_SYMBOL" ]]; then dirty_unpulled_symbol="$PROMPT
 if [[ -n "$PROMPT_UNPUSHED_UNPULLED_SYMBOL" ]]; then unpushed_unpulled_symbol="$PROMPT_UNPUSHED_UNPULLED_SYMBOL"; fi
 if [[ -n "$PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL" ]]; then dirty_unpushed_unpulled_symbol="$PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL"; fi
 
-function get_git_branch() {
+get_git_branch() {
   # On branches, this will return the branch name
   # On non-branches, (no branch)
-  ref="$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')"
+  local ref="$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')"
   if [[ "$ref" != "" ]]; then
     echo "$ref"
   else
@@ -99,10 +99,10 @@ function get_git_branch() {
   fi
 }
 
-function get_git_progress() {
+get_git_progress() {
   # Detect in-progress actions (e.g. merge, rebase)
   # https://github.com/git/git/blob/v1.9-rc2/wt-status.c#L1199-L1241
-  git_dir="$(git rev-parse --git-dir)"
+  local git_dir="$(git rev-parse --git-dir)"
 
   # git merge
   if [[ -f "$git_dir/MERGE_HEAD" ]]; then
@@ -132,7 +132,7 @@ function get_git_progress() {
   fi
 }
 
-function is_branch1_behind_branch2 () {
+is_branch1_behind_branch2() {
   # $ git log origin/master..master -1
   # commit 4a633f715caf26f6e9495198f89bba20f3402a32
   # Author: Todd Wolfson <todd@twolfson.com>
@@ -141,21 +141,21 @@ function is_branch1_behind_branch2 () {
   #     Unsynced commit
 
   # Find the first log (if any) that is in branch1 but not branch2
-  first_log="$(git log $1..$2 -1 2> /dev/null)"
+  local first_log="$(git log $1..$2 -1 2> /dev/null)"
 
   # Exit with 0 if there is a first log, 1 if there is not
   [[ -n "$first_log" ]]
 }
 
-function branch_exists () {
+branch_exists() {
   # List remote branches           | # Find our branch and exit with 0 or 1 if found/not found
   git branch --remote 2> /dev/null | grep --quiet "$1"
 }
 
-function parse_git_ahead () {
+parse_git_ahead() {
   # Grab the local and remote branch
-  branch="$(get_git_branch)"
-  remote_branch="origin/$branch"
+  local branch="$(get_git_branch)"
+  local remote_branch="origin/$branch"
 
   # $ git log origin/master..master
   # commit 4a633f715caf26f6e9495198f89bba20f3402a32
@@ -173,10 +173,10 @@ function parse_git_ahead () {
   fi
 }
 
-function parse_git_behind () {
+parse_git_behind() {
   # Grab the branch
-  branch="$(get_git_branch)"
-  remote_branch="origin/$branch"
+  local branch="$(get_git_branch)"
+  local remote_branch="origin/$branch"
 
   # $ git log master..origin/master
   # commit 4a633f715caf26f6e9495198f89bba20f3402a32
@@ -192,18 +192,18 @@ function parse_git_behind () {
   fi
 }
 
-function parse_git_dirty() {
+parse_git_dirty() {
   # If the git status has *any* changes (e.g. dirty), echo our character
   if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then
     echo 1
   fi
 }
 
-function get_git_status() {
+get_git_status() {
   # Grab the git dirty and git behind
-  dirty_branch="$(parse_git_dirty)"
-  branch_ahead="$(parse_git_ahead)"
-  branch_behind="$(parse_git_behind)"
+  local dirty_branch="$(parse_git_dirty)"
+  local branch_ahead="$(parse_git_ahead)"
+  local branch_behind="$(parse_git_behind)"
 
   # Iterate through all the cases and if it matches, then echo
   if [[ "$dirty_branch" == 1 && "$branch_ahead" == 1 && "$branch_behind" == 1 ]]; then
@@ -225,14 +225,14 @@ function get_git_status() {
   fi
 }
 
-function get_git_info () {
+get_git_info () {
   # Grab the branch
-  branch="$(get_git_branch)"
+  local branch="$(get_git_branch)"
 
   # If there are any branches
   if [[ "$branch" != "" ]]; then
     # Echo the branch
-    output="$branch"
+    local output="$branch"
 
     # Add on the git status
     output="$output $(get_git_status)"
@@ -242,21 +242,11 @@ function get_git_info () {
   fi
 }
 
-# Symbol displayed at the line of every prompt
-function get_prompt_symbol() {
-  # If we are root, display `#`. Otherwise, `$`
-  if [[ "$UID" == 0 ]]; then
-    echo "#"
-  else
-    echo "\$"
-  fi
-}
-
-function is_on_git() {
+is_on_git() {
   git rev-parse 2> /dev/null
 }
 
-function ssh_client() {
+ssh_client() {
   if [ -n "$SSH_CLIENT" ]; then
     echo "("${$SSH_CLIENT%% *}")";
   else
@@ -264,8 +254,13 @@ function ssh_client() {
   fi
 }
 
-function create_bash_prompt {
-  export PS1="\[$user_color\]$(ssh_client)\[$reset\]\[$reset\]\[$dir_color\]\w\[$reset\]\$( is_on_git && echo -n \" \[$preposition_color\] on \[$reset\] \" && echo -n \"\[$git_status_color\]\$(get_git_info)\" && echo -n \"\[$git_progress_color\]\$(get_git_progress)\" && echo -n \"\[$preposition_color\]\")\[$reset\]\[$symbol_color\] $(get_prompt_symbol) \[$reset\]"
+create_bash_prompt() {
+  PS1="\[$user_color\]$(ssh_client)\[$reset\]\[$reset\]\[$dir_color\]\w\[$reset\]\$( is_on_git && echo -n \" \[$preposition_color\] on \[$reset\] \" && echo -n \"\[$git_status_color\]\$(get_git_info)\" && echo -n \"\[$git_progress_color\]\$(get_git_progress)\" && echo -n \"\[$preposition_color\]\")\[$reset\]\[$symbol_color\] \$ \[$reset\]"
+}
+
+set_tab_title() {
+  echo -n -e "\033]0;${PWD##*/}\007"
 }
 
 export PROMPT_COMMAND=create_bash_prompt
+export PROMPT_COMMAND="set_tab_title ; $PROMPT_COMMAND"
