@@ -1,6 +1,5 @@
-if [ -z "$PS1" ]; then
-  return
-fi
+# Only for bash:
+[ "$BASH_VERSION" ] || return
 
 PROMPT_DIRTRIM=3
 
@@ -57,13 +56,13 @@ else
 fi
 
 # Apply any color overrides that have been set in the environment
-if [[ -n "$PROMPT_USER_COLOR" ]]; then user_color="$PROMPT_USER_COLOR"; fi
-if [[ -n "$PROMPT_PREPOSITION_COLOR" ]]; then preposition_color="$PROMPT_PREPOSITION_COLOR"; fi
-if [[ -n "$PROMPT_DEVICE_COLOR" ]]; then device_color="$PROMPT_DEVICE_COLOR"; fi
-if [[ -n "$PROMPT_DIR_COLOR" ]]; then dir_color="$PROMPT_DIR_COLOR"; fi
-if [[ -n "$PROMPT_GIT_STATUS_COLOR" ]]; then git_status_color="$PROMPT_GIT_STATUS_COLOR"; fi
-if [[ -n "$PROMPT_GIT_PROGRESS_COLOR" ]]; then git_progress_color="$PROMPT_GIT_PROGRESS_COLOR"; fi
-if [[ -n "$PROMPT_SYMBOL_COLOR" ]]; then symbol_color="$PROMPT_SYMBOL_COLOR"; fi
+[ "$PROMPT_USER_COLOR" ] && user_color="$PROMPT_USER_COLOR"
+[ "$PROMPT_PREPOSITION_COLOR" ] && preposition_color="$PROMPT_PREPOSITION_COLOR"
+[ "$PROMPT_DEVICE_COLOR" ] && device_color="$PROMPT_DEVICE_COLOR"
+[ "$PROMPT_DIR_COLOR" ] && dir_color="$PROMPT_DIR_COLOR"
+[ "$PROMPT_GIT_STATUS_COLOR" ] && git_status_color="$PROMPT_GIT_STATUS_COLOR"
+[ "$PROMPT_GIT_PROGRESS_COLOR" ] && git_progress_color="$PROMPT_GIT_PROGRESS_COLOR"
+[ "$PROMPT_SYMBOL_COLOR" ] && symbol_color="$PROMPT_SYMBOL_COLOR"
 
 # Set up symbols
 synced_symbol=""
@@ -79,20 +78,20 @@ dirty_unpushed_unpulled_symbol="⬢ "
 # DEV: Working unicode symbols can be determined via the following gist
 #   **WARNING: The following gist has 64k lines and may freeze your browser**
 #   https://gist.github.com/twolfson/9cc7968eb6ee8b9ad877
-if [[ -n "$PROMPT_SYNCED_SYMBOL" ]]; then synced_symbol="$PROMPT_SYNCED_SYMBOL"; fi
-if [[ -n "$PROMPT_DIRTY_SYNCED_SYMBOL" ]]; then dirty_synced_symbol="$PROMPT_DIRTY_SYNCED_SYMBOL"; fi
-if [[ -n "$PROMPT_UNPUSHED_SYMBOL" ]]; then unpushed_symbol="$PROMPT_UNPUSHED_SYMBOL"; fi
-if [[ -n "$PROMPT_DIRTY_UNPUSHED_SYMBOL" ]]; then dirty_unpushed_symbol="$PROMPT_DIRTY_UNPUSHED_SYMBOL"; fi
-if [[ -n "$PROMPT_UNPULLED_SYMBOL" ]]; then unpulled_symbol="$PROMPT_UNPULLED_SYMBOL"; fi
-if [[ -n "$PROMPT_DIRTY_UNPULLED_SYMBOL" ]]; then dirty_unpulled_symbol="$PROMPT_DIRTY_UNPULLED_SYMBOL"; fi
-if [[ -n "$PROMPT_UNPUSHED_UNPULLED_SYMBOL" ]]; then unpushed_unpulled_symbol="$PROMPT_UNPUSHED_UNPULLED_SYMBOL"; fi
-if [[ -n "$PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL" ]]; then dirty_unpushed_unpulled_symbol="$PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL"; fi
+[ "$PROMPT_SYNCED_SYMBOL" ] && synced_symbol="$PROMPT_SYNCED_SYMBOL"
+[ "$PROMPT_DIRTY_SYNCED_SYMBOL" ] && dirty_synced_symbol="$PROMPT_DIRTY_SYNCED_SYMBOL"
+[ "$PROMPT_UNPUSHED_SYMBOL" ] && unpushed_symbol="$PROMPT_UNPUSHED_SYMBOL"
+[ "$PROMPT_DIRTY_UNPUSHED_SYMBOL" ] && dirty_unpushed_symbol="$PROMPT_DIRTY_UNPUSHED_SYMBOL"
+[ "$PROMPT_UNPULLED_SYMBOL" ] && unpulled_symbol="$PROMPT_UNPULLED_SYMBOL"
+[ "$PROMPT_DIRTY_UNPULLED_SYMBOL" ] && dirty_unpulled_symbol="$PROMPT_DIRTY_UNPULLED_SYMBOL"
+[ "$PROMPT_UNPUSHED_UNPULLED_SYMBOL" ] && unpushed_unpulled_symbol="$PROMPT_UNPUSHED_UNPULLED_SYMBOL"
+[ "$PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL" ] && dirty_unpushed_unpulled_symbol="$PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL"
 
 get_git_branch() {
   # On branches, this will return the branch name
   # On non-branches, (no branch)
   local ref="$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')"
-  if [[ "$ref" != "" ]]; then
+  if [ "$ref" ]; then
     echo "$ref"
   else
     echo "(no branch)"
@@ -144,7 +143,7 @@ is_branch1_behind_branch2() {
   local first_log="$(git log $1..$2 -1 2> /dev/null)"
 
   # Exit with 0 if there is a first log, 1 if there is not
-  [[ -n "$first_log" ]]
+  [ "$first_log" ]
 }
 
 branch_exists() {
@@ -166,8 +165,8 @@ parse_git_ahead() {
 
   # If the remote branch is behind the local branch
   # or it has not been merged into origin (remote branch doesn't exist)
-  if (is_branch1_behind_branch2 "$remote_branch" "$branch" ||
-    ! branch_exists "$remote_branch"); then
+  if is_branch1_behind_branch2 "$remote_branch" "$branch" ||
+    ! branch_exists "$remote_branch"; then
     # echo our character
     echo 1
   fi
@@ -194,7 +193,7 @@ parse_git_behind() {
 
 parse_git_dirty() {
   # If the git status has *any* changes (e.g. dirty), echo our character
-  if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then
+  if [ "$(git status --porcelain 2> /dev/null)" ]; then
     echo 1
   fi
 }
@@ -225,20 +224,14 @@ get_git_status() {
   fi
 }
 
-get_git_info () {
+get_git_info() {
   # Grab the branch
   local branch="$(get_git_branch)"
 
   # If there are any branches
-  if [[ "$branch" != "" ]]; then
-    # Echo the branch
-    local output="$branch"
-
-    # Add on the git status
-    output="$output $(get_git_status)"
-
-    # Echo our output
-    echo "$output"
+  if [ "$branch" ]; then
+    # The branch and git status
+    echo "$branch $(get_git_status)"
   fi
 }
 
@@ -247,15 +240,13 @@ is_on_git() {
 }
 
 ssh_client() {
-  if [ -n "$SSH_CLIENT" ]; then
-    echo "("${$SSH_CLIENT%% *}")";
-  else
-    echo ""
+  if [ "$SSH_CLIENT" ]; then
+    echo "(${$SSH_CLIENT%% *})";
   fi
 }
 
 create_bash_prompt() {
-  PS1="\[$user_color\]$(ssh_client)\[$reset\]\[$reset\]\[$dir_color\]\w\[$reset\]\$( is_on_git && echo -n \" \[$preposition_color\] on \[$reset\] \" && echo -n \"\[$git_status_color\]\$(get_git_info)\" && echo -n \"\[$git_progress_color\]\$(get_git_progress)\" && echo -n \"\[$preposition_color\]\")\[$reset\]\[$symbol_color\] \$ \[$reset\]"
+  PS1="\[$user_color\]$(ssh_client)\[$reset\]\[$dir_color\]\w\[$reset\]\$( is_on_git && echo -n \" \[$preposition_color\] on \[$reset\] \" && echo -n \"\[$git_status_color\]\$(get_git_info)\" && echo -n \"\[$git_progress_color\]\$(get_git_progress)\" && echo -n \"\[$preposition_color\]\")\[$reset\]\[$symbol_color\] \$ \[$reset\]"
 }
 
 set_tab_title() {
