@@ -15,10 +15,12 @@ brew install mongodb
 brew install rethinkdb
 brew install redis
 brew install heroku-toolbelt
-brew install mr
 brew install imagemagick
 brew install xctool
 brew install boot2docker
+brew tap atlassian/tap
+brew install atlassian/tap/atlassian-plugin-sdk
+brew install watchman
 
 brew cleanup
 
