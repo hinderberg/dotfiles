@@ -21,6 +21,7 @@ brew install boot2docker
 brew tap atlassian/tap
 brew install atlassian/tap/atlassian-plugin-sdk
 brew install watchman
+npm install -g react-native-cli
 
 brew cleanup
 
