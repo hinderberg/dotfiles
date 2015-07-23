@@ -13,6 +13,7 @@
 !.gitconfig
 !.gitignore
 !.gitignore_global
+!.gitconfig.private.example
 
 !.npmrc
 
