@@ -23,11 +23,13 @@ brew install boot2docker
 brew tap atlassian/tap
 brew install atlassian/tap/atlassian-plugin-sdk
 brew install watchman
+brew install flow
 
 brew cask install google-chrome
 brew cask install totalterminal
 brew cask install visual-studio-code
 brew cask install android-studio
+brew cask install virtualbox
 
 npm install -g react-native-cli
 npm install -g npm-check-updates
