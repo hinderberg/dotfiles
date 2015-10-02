@@ -1,5 +1,8 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
+
 # Update brew
 brew update
 
@@ -8,11 +11,11 @@ brew upgrade
 
 brew install caskroom/cask/brew-cask
 
+brew install mitmproxy
 brew install findutils
 brew install bash
 brew install git
 brew install bash-completion
-brew install node
 brew install mongodb
 brew install rethinkdb
 brew install redis
@@ -30,6 +33,7 @@ brew cask install totalterminal
 brew cask install visual-studio-code
 brew cask install android-studio
 brew cask install virtualbox
+brew cask install atom
 
 npm install -g react-native-cli
 npm install -g npm-check-updates
@@ -37,7 +41,20 @@ npm install -g npm-check-updates
 sudo gem install cocoapods
 pod setup --verbose
 
+apm install atom-html-preview
+apm install emmet
+apm install save-session
+apm install highlight-selected
+apm install highlight-line
+apm install minimap
+apm install atom-beautify
+apm install color-picker
+apm install merge-conflicts
+apm install atom-shortcuts
+
 brew cleanup
+
+nvm install stable
 
 curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
