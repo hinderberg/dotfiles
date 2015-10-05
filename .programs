@@ -29,7 +29,6 @@ brew install watchman
 brew install flow
 
 brew cask install google-chrome
-brew cask install totalterminal
 brew cask install visual-studio-code
 brew cask install android-studio
 brew cask install virtualbox
@@ -51,6 +50,7 @@ apm install atom-beautify
 apm install color-picker
 apm install merge-conflicts
 apm install atom-shortcuts
+apm install keybinding-cheatsheet
 
 brew cleanup
 
