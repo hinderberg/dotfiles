@@ -99,6 +99,10 @@ export MANWIDTH
 
 # Mail
 
+# Docker
+
+eval "$(docker-machine env dev)"
+
 unset MAILCHECK
 
 ####################

@@ -3,6 +3,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Install nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
 
+
 # Update brew
 brew update
 
@@ -22,17 +23,25 @@ brew install redis
 brew install heroku-toolbelt
 brew install imagemagick
 brew install xctool
+brew install docker
 brew install boot2docker
+brew install docker-compose
+brew install docker-machine
+brew install docker-swarm
 brew tap atlassian/tap
 brew install atlassian/tap/atlassian-plugin-sdk
 brew install watchman
 brew install flow
+brew install awsebcli
+brew install carthage
 
 brew cask install google-chrome
 brew cask install visual-studio-code
 brew cask install android-studio
 brew cask install virtualbox
 brew cask install atom
+
+nvm install stable
 
 npm install -g react-native-cli
 npm install -g npm-check-updates
@@ -53,10 +62,5 @@ apm install atom-shortcuts
 apm install keybinding-cheatsheet
 
 brew cleanup
-
-nvm install stable
-
-curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
 
 curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
