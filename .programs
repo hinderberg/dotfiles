@@ -12,6 +12,7 @@ brew upgrade
 
 brew install caskroom/cask/brew-cask
 
+brew install maven
 brew install mitmproxy
 brew install findutils
 brew install bash
