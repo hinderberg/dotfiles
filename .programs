@@ -3,6 +3,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Install nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
 
+# Install
+curl https://sdk.cloud.google.com | bash
+# gcloud init
 
 # Update brew
 brew update
@@ -37,6 +40,8 @@ brew install awsebcli
 brew install carthage
 brew install ngrok
 
+brew cask install java
+brew cask install vagrant
 brew cask install google-chrome
 brew cask install visual-studio-code
 brew cask install android-studio
@@ -62,6 +67,9 @@ apm install color-picker
 apm install merge-conflicts
 apm install atom-shortcuts
 apm install keybinding-cheatsheet
+apm install atom-ternjs
+apm install linter-eslint
+apm install atom-material-ui atom-material-syntax atom-material-syntax-light
 
 brew cleanup
 
