@@ -68,7 +68,6 @@ apm install highlight-selected
 apm install js-refactor
 apm install refactor
 apm install keybinding-cheatsheet
-apm install language-json
 apm install linter
 apm install linter-eslint
 apm install merge-conflicts
