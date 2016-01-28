@@ -57,19 +57,25 @@ npm install -g npm-check-updates
 sudo gem install cocoapods
 pod setup --verbose
 
-apm install atom-html-preview
-apm install emmet
-apm install save-session
-apm install highlight-selected
-apm install highlight-line
-apm install minimap
 apm install atom-beautify
-apm install color-picker
-apm install merge-conflicts
+apm install atom-html-preview
 apm install atom-shortcuts
-apm install keybinding-cheatsheet
 apm install atom-ternjs
+apm install color-picker
+apm install emmet
+apm install highlight-line
+apm install highlight-selected
+apm install js-refactor
+apm install refactor
+apm install keybinding-cheatsheet
+apm install language-json
+apm install linter
 apm install linter-eslint
+apm install merge-conflicts
+apm install minimap
+apm install react
+apm install save-session
+
 apm install atom-material-ui atom-material-syntax atom-material-syntax-light
 
 brew cleanup

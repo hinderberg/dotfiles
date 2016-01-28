@@ -118,3 +118,5 @@ _useJava 1.8
 function server() {
 	python -m SimpleHTTPServer $1
 }
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
