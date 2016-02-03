@@ -48,6 +48,8 @@ brew cask install android-studio
 brew cask install virtualbox
 brew cask install atom
 brew cask install sourcetree
+brew cask install Spectacle
+brew cask install sequel-pro
 
 nvm install stable
 
