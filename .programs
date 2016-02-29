@@ -14,7 +14,7 @@ brew update
 brew upgrade
 
 brew install caskroom/cask/brew-cask
-
+brew install macvim
 brew install maven
 brew install mitmproxy
 brew install findutils
@@ -61,14 +61,16 @@ pod setup --verbose
 
 apm install atom-beautify
 apm install atom-html-preview
-apm install atom-shortcuts
 apm install atom-ternjs
 apm install color-picker
 apm install emmet
 apm install highlight-line
 apm install highlight-selected
-apm install js-refactor
 apm install refactor
+apm install js-refactor
+apm install redux-snippets
+apm install package-atom-snippets
+apm install es6-javascript
 apm install keybinding-cheatsheet
 apm install linter
 apm install linter-eslint
