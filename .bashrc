@@ -253,5 +253,16 @@ set_tab_title() {
   echo -n -e "\033]0;${PWD##*/}\007"
 }
 
+update_terminal_cwd() {
+    # Identify the directory using a "file:" scheme URL,
+    # including the host name to disambiguate local vs.
+    # remote connections. Percent-escape spaces.
+    local SEARCH=' '
+    local REPLACE='%20'
+    local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+    printf '\e]7;%s\a' "$PWD_URL"
+}
+
 export PROMPT_COMMAND=create_bash_prompt
-export PROMPT_COMMAND="set_tab_title ; $PROMPT_COMMAND"
+export PROMPT_COMMAND="set_tab_title; $PROMPT_COMMAND"
+export PROMPT_COMMAND="update_terminal_cwd; $PROMPT_COMMAND"
