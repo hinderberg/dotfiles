@@ -4,7 +4,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
 
 # Install
-curl https://sdk.cloud.google.com | bash
+#curl https://sdk.cloud.google.com | bash
 # gcloud init
 
 # Update brew
@@ -39,6 +39,7 @@ brew install flow
 brew install awsebcli
 brew install carthage
 brew install ngrok
+brew install android-sdk
 
 brew cask install java
 brew cask install vagrant
