@@ -92,6 +92,8 @@ apm install monokai-seti
 apm install open-recent
 apm install minimap-highlight-selected
 apm install pigments
+apm install markdown-preview-enhanced
+apm install split-diff
 
 brew cleanup
 
