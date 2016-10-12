@@ -38,6 +38,7 @@
 	pu = push origin master
 	up = pull --rebase
 	reb = rebase
+	cleanup = "!git co master && git branch --no-color --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 	l  = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen%cr%Creset' -n 15
 	ll = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen%cr%Creset'
 	lg = log --pretty='tformat:%Cred%h%Creset %C(yellow)%an%Creset (%Cgreen%ar%Creset) %s'
