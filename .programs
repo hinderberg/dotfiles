@@ -74,10 +74,21 @@ brew cask install ${apps[@]}
 
 # Fonts
 
-echo "Installing fonts ..."
 brew tap caskroom/fonts
-brew cask install font-hack
-brew cask install font-fira-code
+
+fonts=(
+  font-m-plus
+  font-clear-sans
+  font-roboto
+  font-source-code-pro
+  font-inconsolata
+  font-hack
+  font-fira-code
+)
+
+echo "Installing fonts..."
+brew cask install ${fonts[@]}
+
 
 # Brew cleanup
 brew cleanup
