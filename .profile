@@ -103,7 +103,9 @@ unset MAILCHECK
 
 # Docker
 
-eval "$(docker-machine env dev)"
+function useDocker() {
+	eval "$(docker-machine env dev)"
+}
 
 ####################
 # Functions
