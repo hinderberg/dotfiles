@@ -1,7 +1,9 @@
 # OSX
+
 .DS_Store
 
 # Misc
+
 *.log
 *.log.1
 *.log.2
@@ -15,12 +17,14 @@
 *.old
 
 # IDEA
+
 .idea/
 *.iml
 *.iws
 *.ipr
 
 # Java
+
 out/
 target/
 classes/
@@ -28,16 +32,7 @@ tmp/
 dist/
 test-out/
 
-# Eclipse
-.project
-.settings
-.classpath
-.manager
-
-# SCM
-.svn
-.hg*
-
 # DB
+
 *.sqlite3
 *.db

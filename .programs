@@ -1,11 +1,8 @@
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
-
-# Install
-#curl https://sdk.cloud.google.com | bash
-# gcloud init
+if test ! $(which brew); then
+    echo "Installing homebrew.."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # Update brew
 brew update
@@ -13,88 +10,130 @@ brew update
 # Update brew formula
 brew upgrade
 
-brew install caskroom/cask/brew-cask
-brew install python
-brew install macvim
-brew install maven
-brew install mitmproxy
-brew install findutils
-brew install bash
-brew install git
-brew install bash-completion
-brew install mongodb
-brew install rethinkdb
-brew install redis
-brew install heroku-toolbelt
-brew install imagemagick
-brew install xctool
-brew install docker
-brew install boot2docker
-brew install docker-compose
-brew install docker-machine
-brew install docker-swarm
-brew tap atlassian/tap
-brew install atlassian/tap/atlassian-plugin-sdk
-brew install watchman
-brew install flow
-brew install awsebcli
-brew install carthage
-brew install android-sdk
+packages=(
+    coreutils
+    findutils
+    bash
+    caskroom/cask/brew-cask
+    python
+    macvim
+    vim
+    maven
+    mitmproxy
+    findutils
+    git
+    bash-completion
+    mongodb
+    rethinkdb
+    redis
+    heroku-toolbelt
+    imagemagick
+    xctool
+    docker
+    docker-compose
+    docker-machine
+    docker-swarm
+    watchman
+    flow
+    awsebcli
+    carthage
+)
 
-brew cask install ngrok
-brew cask install java
-brew cask install vagrant
-brew cask install google-chrome
-brew cask install visual-studio-code
-brew cask install android-studio
-brew cask install virtualbox
-brew cask install atom
-brew cask install sourcetree
-brew cask install Spectacle
-brew cask install sequel-pro
+# Install the packages
+echo "Installing packages.."
+brew install ${packages[@]}
 
-pip install awscli
+apps=(
+    google-chrome
+    firefox
+    spotify
+    vlc
+    1password
+    slack
+    marked
+    cheatsheet
+    quicklook-json
+    flux
+    google-drive
+    dropbox
+    virtualbox
+    atom
+    jetbrains-toolbox
+    ngrok
+    vagrant
+    java
+    sourcetree
+    Spectacle
+    postico
+    sketch
+)
+
+echo "Installing apps.."
+brew cask install ${apps[@]}
+
+# Fonts
+
+echo "Installing fonts ..."
+brew tap caskroom/fonts
+brew cask install font-hack
+brew cask install font-fira-code
+
+# Brew cleanup
+brew cleanup
+
+# Install nvm
+
+if test ! $(which nvm); then
+    echo "Installing nvm.."
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
+fi
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
 
 nvm install stable
 
-npm install -g react-native-cli
-npm install -g npm-check-updates
+npms=(
+    react-native-cli
+    npm-check-updates
+)
 
-sudo gem install cocoapods
-pod setup --verbose
+npm install -g ${npms[@]}
 
-apm install atom-beautify
-apm install atom-html-preview
-apm install atom-ternjs
-apm install color-picker
-apm install emmet
-apm install highlight-line
-apm install highlight-selected
-apm install refactor
-apm install js-refactor
-apm install redux-snippets
-apm install package-atom-snippets
-apm install es6-javascript
-apm install keybinding-cheatsheet
-apm install linter
-apm install linter-eslint
-apm install merge-conflicts
-apm install minimap
-apm install react
-apm install save-session
-apm install hyperclick
-apm install js-hyperclick
 
-apm install atom-material-ui atom-material-syntax atom-material-syntax-light
-apm install seti-ui
-apm install monokai
-apm install monokai-seti
-apm install open-recent
-apm install minimap-highlight-selected
-apm install pigments
-apm install markdown-preview-enhanced
-apm install split-diff
+# Install apms
 
-brew cleanup
+apms=(
+    atom-beautify
+    atom-html-preview
+    atom-ternjs
+    color-picker
+    emmet
+    highlight-line
+    highlight-selected
+    refactor
+    js-refactor
+    redux-snippets
+    package-atom-snippets
+    es6-javascript
+    keybinding-cheatsheet
+    linter
+    linter-eslint
+    minimap
+    react
+    save-session
+    hyperclick
+    js-hyperclick
+    atom-material-ui
+    atom-material-syntax
+    atom-material-syntax-light
+    seti-ui
+    monokai
+    monokai-seti
+    open-recent
+    minimap-highlight-selected
+    pigments
+    markdown-preview-enhanced
+    split-diff
+)
 
-curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
+apm install ${apms[@]}

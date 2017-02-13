@@ -1,18 +1,14 @@
 dotfiles
 ========
 
-#OSX
+# Do on OSX
 
-## Colors 
+## Setup new machine
 
-Terminal theme: https://github.com/tomislav/osx-terminal.app-colors-solarized 
+* run `./startup.sh`
+* Change bash Terminal > Prefrences > Startup > Shells open with = /usr/local/bin/bash
+* Install https://github.com/PostgresApp/PostgresApp
+* Install AppStore apps
 
-## Font
-
-http://www.levien.com/type/myfonts/inconsolata.html
-
-## Bash
-
-Change bash Terminal > Prefrences > Startup > Shells open with = /usr/local/bin/bash
-
-
+# Credits
+Terminal theme: https://github.com/carloscuesta/materialshell
