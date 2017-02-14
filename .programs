@@ -64,7 +64,7 @@ apps=(
     vagrant
     java
     sourcetree
-    Spectacle
+    spectacle
     postico
     sketch
 )
