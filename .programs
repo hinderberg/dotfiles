@@ -67,6 +67,7 @@ apps=(
     spectacle
     postico
     sketch
+    skype
 )
 
 echo "Installing apps.."
