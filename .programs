@@ -106,8 +106,8 @@ fi
 nvm install stable
 
 npms=(
-    react-native-cli
-    npm-check-updates
+    react-native-cli,
+    npm-check
 )
 
 npm install -g ${npms[@]}
