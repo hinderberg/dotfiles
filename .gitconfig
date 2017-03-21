@@ -31,6 +31,7 @@
 [log]
 	date = iso
 [alias]
+	b = checkout -b
 	unstage = reset HEAD --
 	s = status -sb
 	ci = commit
