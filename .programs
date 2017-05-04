@@ -54,7 +54,6 @@ apps=(
     marked
     cheatsheet
     quicklook-json
-    flux
     google-drive
     dropbox
     virtualbox
