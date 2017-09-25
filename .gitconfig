@@ -57,7 +57,7 @@
 [merge]
 	tool = opendiff
 [branch]
-	autosetuprebase = always
+	autosetuprebase = never
 [branch "master"]
 	remote = origin
 	merge = refs/heads/master
