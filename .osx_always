@@ -33,7 +33,7 @@ alias t='tab'
 alias tn='tabname'
 alias wn='winname'
 
-alias s='open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
+alias s='open /System/Library/CoreServices/ScreenSaverEngine.app'
 alias safarihardware='CA_COLOR_OPAQUE=1 /Applications/Safari.app/Contents/MacOS/Safari'
 alias simulatorhardware='CA_COLOR_OPAQUE=1 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app/Contents/MacOS/iPhone\ Simulator'
 alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
