@@ -9,6 +9,8 @@ alias la="ls -al"
 alias ll="ls -l"
 alias l="ls"
 
+alias sortc="pbpaste | sort | pbcopy"
+
 alias pu="pushd ."
 alias po="popd"
 
