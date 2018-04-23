@@ -45,6 +45,7 @@ echo "Installing packages.."
 brew install ${packages[@]}
 
 apps=(
+    iterm2
     google-chrome
     firefox
     spotify
