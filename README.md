@@ -10,5 +10,8 @@ dotfiles
 * Install https://github.com/PostgresApp/PostgresApp
 * Install AppStore apps
 
+##
+https://medium.freecodecamp.org/jazz-up-your-bash-terminal-a-step-by-step-guide-with-pictures-80267554cb22
+
 # Credits
 Terminal theme: https://github.com/carloscuesta/materialshell
