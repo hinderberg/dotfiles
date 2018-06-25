@@ -140,9 +140,17 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use another team in Terminal.app
-open "./materialshell-dark.terminal"
-sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal "Default Window Settings" -string "materialshell-dark"
-defaults write com.apple.terminal "Startup Window Settings" -string "materialshell-dark"
+#open "./materialshell-dark.terminal"
+#sleep 1 # Wait a bit to make sure the theme is loaded
+#defaults write com.apple.terminal "Default Window Settings" -string "materialshell-dark"
+#defaults write com.apple.terminal "Startup Window Settings" -string "materialshell-dark"
+
+pip install --user powerline-status
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+pip install --user powerline-gitstatus
 
 echo "Done with osx changes. Note that some of these changes require a logout/restart to take effect."
