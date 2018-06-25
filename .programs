@@ -15,7 +15,6 @@ packages=(
     findutils
     bash
     m-cli
-    caskroom/cask/brew-cask
     python
     macvim
     vim
