@@ -55,7 +55,9 @@
 	c = commit -m
 	ca = commit -am
 [merge]
-	tool = opendiff
+	tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
 [branch]
 	autosetuprebase = never
 [branch "master"]
@@ -63,3 +65,7 @@
 	merge = refs/heads/master
 [push]
 	default = simple
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
