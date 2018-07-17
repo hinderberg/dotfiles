@@ -67,6 +67,7 @@ apps=(
     postico
     sketch
     skype
+    postman
 )
 
 echo "Installing apps.."
