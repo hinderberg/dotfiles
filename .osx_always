@@ -1,30 +1,3 @@
-tabname() {
-  # Will use current dir name if called without arg.
-  printf "\e]1;${1-$(basename `pwd`)}\a"
-}
-
-winname() {
-  # Will use current dir name if called without arg.
-  printf "\e]2;${1-$(basename `pwd`)}\a"
-}
-
-tab() {
-  # Will cd into current dir if called without arg.
-  osascript -e 'tell application "Terminal"' \
-            -e 'tell application "System Events" to keystroke "t" using {command down}' \
-            -e "do script \"cd `pwd` && $* && tabname\" in front window" \
-            -e 'end tell' > /dev/null
-}
-
-cdf() {
-    target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
-    if [ "$target" != "" ]; then
-        cd "$target"; pwd
-    else
-        echo 'No Finder window found' >&2
-    fi
-}
-
 ####################
 # Alias
 ####################
@@ -39,12 +12,3 @@ alias simulatorhardware='CA_COLOR_OPAQUE=1 /Applications/Xcode.app/Contents/Deve
 alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
-
-####################
-# Loading
-####################
-
-# VERY SLOW!!!
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi

@@ -1,7 +1,6 @@
-
 if test ! $(which brew); then
     echo "Installing homebrew.."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Update brew
@@ -11,34 +10,17 @@ brew update
 brew upgrade
 
 packages=(
-    coreutils
-    findutils
-    bash
-    m-cli
     python
-    macvim
-    vim
-    maven
-    mitmproxy
-    findutils
     git
-    bash-completion
-    mongodb
-    rethinkdb
-    redis
-    heroku-toolbelt
+    heroku/brew/heroku
     imagemagick
-    xctool
-    docker
-    docker-compose
-    docker-machine
-    docker-swarm
-    watchman
-    flow
-    awsebcli
-    carthage
     elm
 )
+
+# Install pip
+sudo easy_install pip
+pip install --user powerline-status
+pip install --user powerline-gitstatus
 
 # Install the packages
 echo "Installing packages.."
@@ -50,24 +32,19 @@ apps=(
     google-chrome
     firefox
     spotify
-    vlc
     1password
     slack
-    marked
     cheatsheet
     quicklook-json
-    google-drive
+    google-drive-file-stream
     dropbox
-    virtualbox
     jetbrains-toolbox
     ngrok
-    vagrant
     java
     sourcetree
     spectacle
     postico
     sketch
-    skype
     postman
 )
 
@@ -106,8 +83,6 @@ fi
 
 nvm install stable
 
-npms=(
-    npm-check
-)
+npms=()
 
-npm install -g ${npms[@]}
+# npm install -g ${npms[@]}
