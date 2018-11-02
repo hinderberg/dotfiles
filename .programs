@@ -14,6 +14,7 @@ packages=(
     git
     heroku/brew/heroku
     imagemagick
+    bash-completion
     elm
 )
 
