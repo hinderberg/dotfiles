@@ -12,41 +12,32 @@ brew upgrade
 packages=(
     python
     git
-    heroku/brew/heroku
     imagemagick
-    bash-completion
     elm
+    zsh
 )
-
-# Install pip
-sudo easy_install pip
-pip install --user powerline-status
-pip install --user powerline-gitstatus
 
 # Install the packages
 echo "Installing packages.."
 brew install ${packages[@]}
 
 apps=(
-    visual-studio-code
-    iterm2
-    google-chrome
+    qlcolorcode
+    qlstephen
+    qlmarkdown
+    quicklook-json
+    qlprettypatch
+    quicklook-csv
+    webpquicklook
+    suspicious-package
     firefox
     spotify
-    1password
-    slack
     cheatsheet
-    quicklook-json
     google-drive-file-stream
     dropbox
-    jetbrains-toolbox
     ngrok
-    java
-    sourcetree
-    spectacle
     postico
-    sketch
-    postman
+    docker
 )
 
 echo "Installing apps.."
@@ -54,7 +45,7 @@ brew cask install ${apps[@]}
 
 # Fonts
 
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 
 fonts=(
   font-m-plus
@@ -87,3 +78,8 @@ nvm install stable
 npms=()
 
 # npm install -g ${npms[@]}
+
+
+# zsh setup
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
