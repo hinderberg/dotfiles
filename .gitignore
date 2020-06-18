@@ -6,10 +6,6 @@
 
 !README.md
 
-!.profile
-!.bashrc
-!.bash_profile
-
 !.gitconfig
 !.gitignore
 !.gitignore_global
@@ -17,12 +13,9 @@
 
 !.npmrc
 
-!.osx
-!.osx_always
-
 !startup.sh
 
-!Inconsolata.otf
 !.programs
-!materialshell-dark.terminal
 !.zshrc
+!.hammerspoon
+!.hammerspoon/**
