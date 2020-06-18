@@ -10,11 +10,12 @@ hs.notify.new({title="Hammerspoon", informativeText="Config loaded"}):send()
 
 
 local applicationHotkeys = {
-    s = 'Google Chrome',
-    a = 'iTerm',
+    b = 'Google Chrome',
+    t = 'iTerm',
     m = 'Mail',
     c = 'Calendar',
-    d = 'Visual Studio Code'
+    v = 'Visual Studio Code',
+    s = 'Slack'
   }
   for key, app in pairs(applicationHotkeys) do
     hs.hotkey.bind(hyper, key, function()
@@ -53,4 +54,8 @@ hs.hotkey.bind(hyper, "Right", function()
   local win = hs.window.focusedWindow();
   if not win then return end
   win:moveToUnit(hs.layout.right50)
+end)
+
+hs.hotkey.bind(hyper, "L", function()
+  hs.caffeinate.lockScreen()
 end)
