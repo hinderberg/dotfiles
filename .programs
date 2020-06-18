@@ -38,6 +38,8 @@ apps=(
     ngrok
     postico
     docker
+    karabiner-elements
+    hammerspoon
 )
 
 echo "Installing apps.."
