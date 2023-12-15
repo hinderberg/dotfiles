@@ -9,10 +9,10 @@
     cmd = code --wait --diff $LOCAL $REMOTE
 
 [includeIf "gitdir:~/coding-personal/"]
-path = ~/coding-personal/.gitconfig.personal
+path = ~/coding-personal/.gitconfig
 
-[includeIf "gitdir:~/conding-work/"]
-path = ~/coding-work/.gitconfig.work
+[includeIf "gitdir:~/coding-work/"]
+path = ~/coding-work/.gitconfig
 
 [core]
 excludesfile = ~/.gitignore      # valid everywhere
