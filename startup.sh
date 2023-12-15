@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 cp ./.gitconfig ~/.gitconfig
-cp ./.gitignore ~/.gitignore
-cp ./.gitignore_global ~/.gitignore_global
 cp ./.npmrc ~/.npmrc
 cp ./.zshrc ~/.zshrc
 cp -R ./.hammerspoon ~/.hammerspoon

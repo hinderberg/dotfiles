@@ -1,71 +1,18 @@
-[include]
-	path = .gitconfig.private
-[color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
-	ui = auto
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
-[help]
-	format = web
-[core]
-	ignorecase = false
-	autocrlf = input
-	filemode = false
-	excludesfile = ~/.gitignore_global
-	editor = code
-	whitespace = tab-in-indent,blank-at-eof
-[log]
-	date = iso
-[alias]
-	b = checkout -b
-	unstage = reset HEAD --
-	s = status -sb
-	ci = commit
-	co = checkout
-	pu = push origin master
-	up = pull --rebase
-	reb = rebase
-	cleanup = "!git co master && git branch --no-color --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-	l  = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen%cr%Creset' -n 15
-	ll = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen%cr%Creset'
-	lg = log --pretty='tformat:%Cred%h%Creset %C(yellow)%an%Creset (%Cgreen%ar%Creset) %s'
-	local = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
-	rank = shortlog -s -n --no-merges
-	undo = reset --soft HEAD^
-	praise = blame
-	w = whatchanged --oneline
-	fix = commit --amend -C HEAD
-	ds = diff -b --stat
-	d = diff -b
-	dw = diff -b --word-diff=color
-	c = commit -m
-	ca = commit -am
 [merge]
 	tool = vscode
 [mergetool "vscode"]
     cmd = code --wait $MERGED
-[branch]
-	autosetuprebase = never
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
-[push]
-	default = simple
+
 [diff]
     tool = vscode
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
+
+[includeIf "gitdir:~/Personal/"]
+path = ~/Personal/.gitconfig.personal
+
+[includeIf "gitdir:~/Work/"]
+path = ~/Work/.gitconfig.work
+
+[core]
+excludesfile = ~/.gitignore      # valid everywhere

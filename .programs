@@ -36,15 +36,13 @@ apps=(
     ngrok
     karabiner-elements
     hammerspoon
-    todoist
     github
     messenger
     slack
     1password
-    zoom
     miro
     airtable
-    cursor
+    vscode
 )
 
 echo "Installing apps.."
@@ -83,7 +81,6 @@ fi
 nvm install stable
 
 npms=()
-
 # npm install -g ${npms[@]}
 
 
