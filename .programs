@@ -15,7 +15,7 @@ packages=(
     imagemagick
     elm
     zsh
-    zsh-autosuggestion
+    zsh-autosuggestions
     1password-cli
     pnpm
 )
@@ -42,7 +42,7 @@ apps=(
     1password
     miro
     airtable
-    vscode
+    visual-studio-code
 )
 
 echo "Installing apps.."
@@ -53,7 +53,6 @@ brew install ${apps[@]} --cask
 brew tap homebrew/cask-fonts
 
 fonts=(
-  font-m-plus
   font-clear-sans
   font-roboto
   font-source-code-pro
@@ -63,7 +62,7 @@ fonts=(
 )
 
 echo "Installing fonts..."
-brew cask install ${fonts[@]}
+brew install ${fonts[@]} --cask
 
 
 # Brew cleanup

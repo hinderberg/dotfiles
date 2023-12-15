@@ -8,11 +8,11 @@
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
 
-[includeIf "gitdir:~/Personal/"]
-path = ~/Personal/.gitconfig.personal
+[includeIf "gitdir:~/coding-personal/"]
+path = ~/coding-personal/.gitconfig.personal
 
-[includeIf "gitdir:~/Work/"]
-path = ~/Work/.gitconfig.work
+[includeIf "gitdir:~/conding-work/"]
+path = ~/coding-work/.gitconfig.work
 
 [core]
 excludesfile = ~/.gitignore      # valid everywhere
