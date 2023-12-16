@@ -8,12 +8,18 @@
 
 !.gitconfig
 !.gitignore
+!.gitconfig.personal
+!.gitconfig.work
 
 !.npmrc
 
 !startup.sh
 
+
 !.programs
 !.zshrc
 !.hammerspoon
 !.hammerspoon/**
+
+!.ssh
+!.ssh/**

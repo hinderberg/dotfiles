@@ -1,0 +1,10 @@
+[user]
+email = hinderberg@gmail.com
+name = Hans Magnus Inderberg
+signingkey = ~/.ssh/personal.pub
+
+[github]
+user = "hinderberg"
+
+[core]
+sshCommand = "ssh -i ~/.ssh/personal.pub" # public key for your work profile
