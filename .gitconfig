@@ -14,5 +14,14 @@ path = ~/coding-personal/.gitconfig
 [includeIf "gitdir:~/coding-work/"]
 path = ~/coding-work/.gitconfig
 
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true
+
 [core]
 excludesfile = ~/.gitignore      # valid everywhere
