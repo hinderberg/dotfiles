@@ -18,6 +18,7 @@ packages=(
     zsh-autosuggestions
     1password-cli
     pnpm
+    notion
 )
 
 # Install the packages
