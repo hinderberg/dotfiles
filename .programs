@@ -29,6 +29,8 @@ apps=(
     suspicious-package
     iterm2
     grammarly
+    postico
+    postgres-unofficial
     spotify
     cheatsheet
     google-chrome
