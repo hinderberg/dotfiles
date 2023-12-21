@@ -4,7 +4,7 @@ name = Hans Magnus Inderberg
 signingkey = ~/.ssh/work.pub
 
 [github]
-user = "hminderberg"
+user = "hinderberg"
 
 [core]
 sshCommand = "ssh -i ~/.ssh/work.pub" # public key for your work profile
