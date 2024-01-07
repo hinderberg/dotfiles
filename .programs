@@ -46,6 +46,7 @@ apps=(
     miro
     airtable
     visual-studio-code
+    redisinsight
 )
 
 echo "Installing apps.."
