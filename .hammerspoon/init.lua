@@ -1,5 +1,5 @@
 local hyper = { "cmd", "alt", "ctrl", "shift" }
-
+local spaces = require("hs.spaces")
 
 hs.window.animationDuration = 0
 
@@ -119,3 +119,16 @@ end
 bindKey("n", function()
   hs.network.ping.ping("8.8.8.8", 1, 0.01, 1.0, "any", pingResult)
 end)
+
+function MoveWindowToSpace(sp)
+  local win = hs.window.focusedWindow()
+  local cur_screen = hs.screen.mainScreen()
+  local cur_screen_id = cur_screen:getUUID()
+  local all_spaces=spaces.allSpaces()
+  local spaceID = all_spaces[cur_screen_id][sp]
+  spaces.moveWindowToSpace(win:id(), spaceID)
+  spaces.gotoSpace(spaceID)
+end
+bindKey('1', function() MoveWindowToSpace(1) end)
+bindKey('2', function() MoveWindowToSpace(2) end)
+bindKey('3', function() MoveWindowToSpace(3) end)
