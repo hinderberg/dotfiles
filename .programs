@@ -37,8 +37,6 @@ apps=(
     google-drive-file-stream
     dropbox
     ngrok
-    karabiner-elements
-    hammerspoon
     github
     messenger
     slack
@@ -47,6 +45,8 @@ apps=(
     airtable
     visual-studio-code
     redisinsight
+    raycast
+    hyperkey
 )
 
 echo "Installing apps.."
