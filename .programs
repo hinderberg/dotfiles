@@ -18,7 +18,6 @@ packages=(
     zsh-autosuggestions
     1password-cli
     pnpm
-    notion
 )
 
 # Install the packages
@@ -47,6 +46,7 @@ apps=(
     redisinsight
     raycast
     hyperkey
+    notion
 )
 
 echo "Installing apps.."
