@@ -26,7 +26,6 @@ brew install ${packages[@]}
 
 apps=(
     suspicious-package
-    iterm2
     grammarly
     postico
     postgres-unofficial
@@ -47,6 +46,7 @@ apps=(
     raycast
     hyperkey
     notion
+    warp
 )
 
 echo "Installing apps.."
