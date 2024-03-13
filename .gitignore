@@ -16,7 +16,7 @@
 !startup.sh
 
 
-!.programs
+!programs
 !.zshrc
 !.hammerspoon
 !.hammerspoon/**

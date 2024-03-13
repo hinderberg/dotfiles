@@ -32,8 +32,6 @@ apps=(
     spotify
     cheatsheet
     google-chrome
-    google-drive-file-stream
-    dropbox
     ngrok
     github
     messenger
@@ -46,7 +44,7 @@ apps=(
     raycast
     hyperkey
     notion
-    warp
+    iterm2
 )
 
 echo "Installing apps.."
