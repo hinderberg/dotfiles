@@ -45,6 +45,7 @@ apps=(
     hyperkey
     notion
     iterm2
+    bruno
 )
 
 echo "Installing apps.."
