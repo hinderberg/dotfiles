@@ -25,6 +25,7 @@ echo "Installing packages.."
 brew install ${packages[@]}
 
 apps=(
+    kap
     suspicious-package
     grammarly
     postico
