@@ -25,3 +25,6 @@ path = ~/coding-work/.gitconfig
 
 [core]
 excludesfile = ~/.gitignore      # valid everywhere
+
+[pull]
+	rebase = true
